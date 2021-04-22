@@ -6,8 +6,6 @@ import matplotlib.pyplot as plt
 import time
 from datetime import datetime
 from matplotlib.animation import FuncAnimation
-from shapely.geometry import LineString
-import numpy as np
 
 i=1
 x=500
@@ -56,23 +54,24 @@ def showStockDataFrame(stock):
     data_from_db = company.find_one({"index":stock})
     df = pd.DataFrame(data_from_db["data"])
     df.set_index("Date",inplace=True)
-    df['SMA(2)']=df.Close.rolling(2).mean()
-    df['SMA(5)']=df.Close.rolling(5).mean()
+    df['SMA(3)']=df.Close.rolling(2).mean()
+    df['SMA(6)']=df.Close.rolling(4).mean()
     
     count=[]
     for i in range(len(df)):
-        try: 
+        try:
             count.append(((df.Close[i]-df.Close[i+1])*100)/df.Close[i+1])
         except:
             pass
     count.append(0)
     df['%Count']=count
-    
+  
+
     plt.figure(figsize=(12.5,4.5))
     plt.plot(df['Close'],label='close',color='black')
     #plt.plot(df['%Count'],label='Count')
-    plt.plot(df['SMA(2)'],label='SMA3')
-    plt.plot(df['SMA(5)'],label='SMA6')
+    plt.plot(df['SMA(3)'],label='SMA3')
+    plt.plot(df['SMA(6)'],label='SMA6')
     plt.title(stock)
     plt.xlabel("01/01/2015 - 01/01/2020")
     plt.ylabel("close and open price TND")
@@ -82,7 +81,7 @@ def showStockDataFrame(stock):
 
 
 
-#showStockDataFrame('AAPL')
+showStockDataFrame('AAPL')
 #getOneStocks()
 #while True:
 #    getStocks()

@@ -1,0 +1,19 @@
+3 niveau
+recupere les données
+traiter les données(series temprol)
+imolementer les stratégies 
+yelzmek t3adi el order a travers el robot (websoket mouch web services)
+staging (couche 1 yhabet les donéne baad couche o5ra kifma bech t3abi kes me)
+redis base de donnée te5dem al caching
+javascript 5ir
+2 technique (techri bel r5iss w tbi3 bel ghali) (une vente a découvert tbi3 bel ghali w techri bel r5is)
+kifeh nbi3 haja 3andich (vente a découvert mamnou3a fi tounes)
+technique de prédiction (technique permettant de prédire les prix sur series temprel)(arima sarima sarimax garc arch)
+valeur moyenne glissante (3andek euro/us 3ala 2 jours kol d9i9a 2880 pts tcalcel 2 valeur moyenne)nehseb moyenne ala se3a (sma60)simple moving average
+tnajem te5dem ala sma120 (short w longue w ki wahda t9os ala lo5ra maanetha bi3 w wahda o5ra buy)
+stategie o5ra ema expensiel m a 
+w fama ewma w=waited
+flaske api
+alpari wala forex
+investing.com (investpy) ki thotha fi boucle ouverte 
+tjib les paires (mongodb)(robot3t)
